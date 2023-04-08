@@ -21,5 +21,5 @@
 // const result = confirm("Are you here?");
 // console.log(result)
 
-console.log(6%2)
+console.log(9%2)
 
