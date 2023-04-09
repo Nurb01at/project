@@ -22,4 +22,3 @@
 // console.log(result)
 
 console.log(9%2)
-
