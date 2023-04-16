@@ -21,4 +21,10 @@
 // const result = confirm("Are you here?");
 // console.log(result)
 
-console.log(9%2)
+let num = 20
+function showFirstMessage(text) {
+    console.log(text)
+}
+
+showFirstMessage('Hello World!')
+console.log(num)
