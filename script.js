@@ -42,20 +42,34 @@ console.log(personalMovieDB);
 
 //========================================
 
-function getMathResult(a,b) {
-    if (typeof(b) !== 'number' || b <= 0){
-        return a
-    }
-    let str = ''
-    for (let i = 1; i <= b; i++){
-        if (i === b){
-            str += a * i
-        }
-        else {
-            str += a * i + '---'
-        }
-    }
-    console.log(str)
-    
-}
-getMathResult(5, 3)
+const str = "test"
+
+console.log(str[2] = 'd')
+console.log(str.toUpperCase())
+
+console.log(str.toLowerCase())
+
+// --------------------------------
+
+const fruit = "Some fruit"
+
+console.log(fruit.indexOf("f"))
+
+// ------------------------------
+
+const logg = "Hello World!"
+
+console.log(logg.slice(6, 11))
+
+console.log(logg.substring(6, 11))
+
+console.log(logg.substr(6, 5))
+
+// ----------------------------
+const  num = 12.2
+console.log(Math.round(num))
+
+const test = "12.2px"
+console.log(parseInt(test))
+
+console.log(parseFloat(test))
