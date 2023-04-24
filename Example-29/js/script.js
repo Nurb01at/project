@@ -30,17 +30,43 @@ getCoupeNumber(25)
 
 // ------------------------------------------------------------------
 
-function getTimeFromMinutes(isTime) {
-    let num = ''
-    if (typeof (isTime) != 'number' || isTime < 0 || !Number.isInteger(isTime) || isTime > 600){
+function getTimeFromMinutes(gadTime) {
+    const hours = Math.floor(gadTime / 60),
+          minutes = gadTime % 60;
+    if (typeof(gadTime) != 'number' || gadTime < 0 || !Number.isInteger(gadTime)){
+        // return "Ошибка, проверьте данные"
         console.log("Ошибка, проверьте данные")
-        return "Ошибка, проверьте данные"
     }
-    num += isTime.setHours()
-    console.log(num)
+    let hourStr = ''
+    switch (hours){
+        case 0:
+            hourStr = 'часов'
+            break;
+        case 1:
+            hourStr = 'час'
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hourStr = 'часа'
+            break;
+        default:
+            hourStr = 'часов'
+    }
+    console.log(`Это ${hours} ${hourStr} и ${minutes} минут`)
 }
-getTimeFromMinutes(150)
+getTimeFromMinutes(170)
 
-let n = 150
-getHours(n)
-console.log(n)
+
+//---------------------------------------
+function findMaxNumber(a,b,c,d) {
+    if (typeof (a) != 'number' ||
+        typeof (b) != 'number' ||
+        typeof (c) != 'number' ||
+        typeof (d) != 'number'){
+        console.log('0')}
+    else{
+        console.log(Math.max(a,b,c,d))
+    }
+}
+findMaxNumber(6, 6.5, -15, 111)
