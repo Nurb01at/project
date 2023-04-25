@@ -55,7 +55,7 @@ function getTimeFromMinutes(gadTime) {
     }
     console.log(`Это ${hours} ${hourStr} и ${minutes} минут`)
 }
-getTimeFromMinutes(170)
+getTimeFromMinutes(50)
 
 
 //---------------------------------------
@@ -70,3 +70,24 @@ function findMaxNumber(a,b,c,d) {
     }
 }
 findMaxNumber(6, 6.5, -15, 111)
+
+// -------------------
+
+function fib(n) {
+    let a = 0;
+    let b = 1;
+    let fibNum = ''
+    for (let i = 0; i < n; i++) {
+        if (typeof(n) != 'number'){
+            console.log('""')
+            return ""
+        }
+        let c = a + b;
+            a = b;
+            b = c;
+            fibNum += b
+    }
+    console.log(fibNum)
+    return fibNum;
+}
+fib(7)
